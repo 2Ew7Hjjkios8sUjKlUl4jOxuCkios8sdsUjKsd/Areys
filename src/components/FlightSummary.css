@@ -1,0 +1,197 @@
+.flight-summary-container {
+    margin-bottom: 2.5rem;
+    width: 100%;
+}
+
+.summary-scroll-wrapper {
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 1rem;
+    scrollbar-width: thin;
+    scrollbar-color: var(--primary) transparent;
+}
+
+.summary-scroll-wrapper::-webkit-scrollbar {
+    height: 4px;
+}
+
+.summary-scroll-wrapper::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
+}
+
+.summary-cards-flex {
+    display: flex;
+    gap: 1.5rem;
+    min-width: max-content;
+    padding: 0.25rem;
+}
+
+.summary-card {
+    background: white;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 1.25rem;
+    min-width: 280px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.summary-card:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary);
+}
+
+.card-header {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    border-bottom: 1px solid #f1f5f9;
+    padding-bottom: 0.75rem;
+}
+
+.card-label {
+    font-size: 0.75rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+}
+
+/* Main Info Card */
+.route-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.route-text {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.route-arrow {
+    color: var(--primary);
+    opacity: 0.5;
+}
+
+.route-airline {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--primary);
+}
+
+.date-display {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+/* Breakdown Pills */
+.stats-mini-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+.stat-pill {
+    background: var(--bg-main);
+    padding: 0.625rem;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pill-val {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--text-main);
+}
+
+.pill-lbl {
+    font-size: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.stat-pill.accent {
+    background: rgba(245, 158, 11, 0.05);
+}
+
+.stat-pill.accent .pill-val {
+    color: var(--accent);
+}
+
+/* List Stats (Agencies/Creators) */
+.scrollable-stats {
+    display: flex;
+    flex-direction: column;
+    gap: 0.625rem;
+    max-height: 120px;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+}
+
+.contribution-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem 0.75rem;
+    background: var(--bg-main);
+    border-radius: 8px;
+}
+
+.agency-tag-sm {
+    font-size: 11px;
+    font-weight: 800;
+    text-transform: uppercase;
+    padding: 0.125rem 0.5rem;
+    border-radius: 4px;
+}
+
+.creator-name-sm {
+    font-size: 0.8125rem;
+    font-weight: 700;
+    color: var(--text-main);
+}
+
+.contribution-count {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+    font-weight: 600;
+}
+
+.contribution-count b {
+    color: var(--text-main);
+}
+
+/* Color Classes */
+.text-purple {
+    color: #a855f7;
+}
+
+/* Mobile Specific Tweaks */
+@media (max-width: 640px) {
+    .summary-card {
+        min-width: 240px;
+        padding: 1rem;
+    }
+
+    .route-text {
+        font-size: 1.125rem;
+    }
+
+    .route-airline {
+        font-size: 1rem;
+    }
+}
